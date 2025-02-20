@@ -168,7 +168,7 @@ class FileTransferServer {
 
     // Validate file size
     const fileSize = parseInt(message.size);
-    if (fileSize > 500 * 1024 * 1024) { // 500MB limit
+    if (fileSize > 200 * 1024 * 1024) { // 500MB limit
       ws.send(JSON.stringify({
         type: 'error',
         message: 'File too large (max 500MB)'
